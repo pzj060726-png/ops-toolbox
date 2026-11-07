@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OpsToolbox · 运维工具箱</title>
+    <meta
+      name="description"
+      content="纯前端运维工具箱：JSON 格式化、Base64、URL 编解码、JWT 解析、文本 Diff、子网计算、Cron 推算、正则测试、时间戳转换、乱码修复。零依赖、零上传，可离线使用。"
+    />
+    <meta name="theme-color" content="#f2f5f7" />
+    <meta property="og:title" content="OpsToolbox · 运维工具箱" />
+    <meta property="og:description" content="14 个运维高频小工具，纯前端运行，数据不离开浏览器。" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <a class="brand" href="#/json" aria-label="OpsToolbox 首页">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 28 28">
+              <path d="M18.6 14 25 9.3v9.4z" fill="#fff" />
+              <ellipse cx="11.4" cy="14" rx="7.6" ry="6.2" fill="#fff" />
+              <circle cx="8" cy="12.3" r="1.2" fill="#0b6b62" />
+            </svg>
+          </span>
+          <span class="brand-text">
+            <b>OpsToolbox</b>
+            <span>运维工具箱</span>
+          </span>
+        </a>
+
+        <button class="search-btn" id="openPalette" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="15" height="15">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5" stroke-linecap="round" />
+          </svg>
+          <span class="grow">搜索工具…</span>
+          <kbd>Ctrl K</kbd>
+        </button>
+
+        <nav class="nav" id="toolNav" aria-label="工具列表"></nav>
+
+        <div class="sidebar-foot">
+          <div class="foot-row">
+            <button class="ghost-btn" id="themeToggle" type="button" title="切换深浅色"></button>
+            <a class="ghost-btn" id="repoLink" href="#" target="_blank" rel="noreferrer" title="GitHub 仓库">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path d="M9 19c-4 1.5-4-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 4.5-1.4 4.5-5a3.9 3.9 0 0 0-1-2.7 3.6 3.6 0 0 0-.1-2.7s-1.1-.3-3.5 1.3a12 12 0 0 0-6.8 0C6.6 2.1 5.5 2.4 5.5 2.4a3.6 3.6 0 0 0-.1 2.7A3.9 3.9 0 0 0 4.4 8c0 3.6 1.7 4.7 4.5 5-.6.6-.6 1.2-.5 2V21" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+          <p class="hint">零依赖 · 可离线使用</p>
+        </div>
+      </aside>
+
+      <main class="main">
+        <div class="tool-view" id="toolView"></div>
+      </main>
+    </div>
+
+    <div class="palette" id="palette" hidden>
+      <div class="palette-box" role="dialog" aria-modal="true" aria-label="搜索工具">
+        <input id="paletteInput" type="text" placeholder="搜索工具：json / 子网 / cron …" autocomplete="off" spellcheck="false" />
+        <div class="palette-list" id="paletteList" role="listbox"></div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="./assets/app.js"></script>
+  </body>
+</html>

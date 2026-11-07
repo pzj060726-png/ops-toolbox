@@ -1,0 +1,66 @@
+name: 问题反馈
+description: 某个工具算错了、界面坏了，或者表现和预期不一致
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量提供可复现的输入。
+        ⚠️ 请勿粘贴真实的生产日志、密钥、token 等敏感信息。
+  - type: dropdown
+    id: tool
+    attributes:
+      label: 涉及哪个工具
+      options:
+        - JSON 格式化
+        - Base64 编解码
+        - URL 编解码
+        - JWT 解析
+        - 文本 Diff
+        - 子网计算
+        - Cron 表达式
+        - 正则测试
+        - 时间戳转换
+        - HTML 实体
+        - Unicode / 十六进制
+        - 乱码修复
+        - 文本处理
+        - 随机密码
+        - 界面 / 导航 / 主题
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: 输入
+      description: 贴出触发问题的原始内容（记得脱敏）
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+      description: 控制台报错也请贴在这里
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: 浏览器与系统
+      placeholder: Chrome 131 / Windows 11
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我已在本地用最新代码复现过
+          required: false

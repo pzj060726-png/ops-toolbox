@@ -1,0 +1,49 @@
+{
+  "name": "ops-toolbox",
+  "version": "1.0.0",
+  "description": "离线可用的运维 / 开发工具箱：JSON、Base64、子网计算、时间戳、Cron、JWT、文本 Diff，零依赖零构建的纯前端应用。",
+  "keywords": [
+    "toolbox",
+    "devtools",
+    "ops",
+    "sre",
+    "cidr",
+    "cron",
+    "jwt",
+    "diff",
+    "base64",
+    "json",
+    "offline",
+    "vanilla-js",
+    "github-pages"
+  ],
+  "license": "MIT",
+  "author": "裴智杰",
+  "type": "module",
+  "private": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "index.html",
+    "assets",
+    "src/tools",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node --test test/",
+    "test:watch": "node --test --watch test/",
+    "check": "node tools/check.mjs",
+    "preview": "node tools/serve.mjs 4173"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pzj060726-png/ops-toolbox.git"
+  },
+  "homepage": "https://github.com/pzj060726-png/ops-toolbox#readme",
+  "bugs": {
+    "url": "https://github.com/pzj060726-png/ops-toolbox/issues"
+  }
+}

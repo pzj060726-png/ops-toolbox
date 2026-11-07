@@ -1,0 +1,32 @@
+name: 功能建议
+description: 想要新的工具，或现有工具缺少某种能力
+title: "[feat] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: scene
+    attributes:
+      label: 使用场景
+      description: 你当时想解决什么问题？
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 期望的样子
+      description: 输入什么、输出什么，最好举个栗子
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 目前怎么绕过去的
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: 请确认
+      options:
+        - label: 这个需求可以纯前端实现，不需要服务端
+          required: false
+        - label: 我接受它可能因为「保持小巧」而被婉拒
+          required: false
