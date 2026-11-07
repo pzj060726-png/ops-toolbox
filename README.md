@@ -181,7 +181,7 @@ Chrome / Edge 90+、Firefox 90+、Safari 15+。
 
 ## 许可
 
-[MIT](./LICENSE) © 裴智杰
+[MIT](./LICENSE) © pzj060726-png
 
 ---
 

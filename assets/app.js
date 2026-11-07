@@ -260,7 +260,7 @@ const toolbarOf = (...kids) => h("div", {class: "toolbar"}, kids);
 /* ---------------- 示例数据 ---------------- */
 
 const SAMPLES = {
-  json: '{"name":"ops-toolbox","version":"1.0.0","tags":["json","base64","cidr"],"author":{"name":"裴智杰","role":"IT 运维"},"stable":true}',
+  json: '{"name":"ops-toolbox","version":"1.0.0","tags":["json","base64","cidr"],"author":{"name":"pzj060726-png","role":"IT 运维"},"stable":true}',
   base64: "你好，运维工具箱 👋",
   url: "https://example.com/search?q=C++ 与 网络&lang=中文",
   jwt: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
