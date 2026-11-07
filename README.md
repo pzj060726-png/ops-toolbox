@@ -128,51 +128,16 @@ npm start           # 本地预览
 
 详细约定见 [CONTRIBUTING.md](./CONTRIBUTING.md)。
 
-## 发布到 GitHub
+## 部署
 
-仓库里给了两种方式，任选其一。
+仓库自带 `.github/workflows/pages.yml`，push 到 `main` 后自动发布到
+<https://pzj060726-png.github.io/ops-toolbox/>。
 
-**A. 用脚本（推荐）**
+在 **Settings → Pages → Build and deployment** 里保持 **GitHub Actions** 即可；
+换成 **Deploy from a branch**（分支 `main`、目录 `/`）也能发布。
 
-```powershell
-# 本机还没有 git 时先装一个
-winget install --id Git.Git -e --source winget
-
-powershell -ExecutionPolicy Bypass -File tools\publish.ps1 -Owner 你的GitHub用户名
-```
-
-脚本会依次做这些事：把 `README.md` / `package.json` 里的 `your-github-name` 换成你的用户名 →
-`git init` 并提交 → 装了 [GitHub CLI](https://cli.github.com/) 时直接建仓、推送并顺手开启 Pages；
-没装 `gh` 时打印出剩下的手动命令。
-
-**B. 手动**
-
-```bash
-git init -b main
-git add -A && git commit -m "chore: 初始化 OpsToolbox"
-git remote add origin https://github.com/<你的用户名>/ops-toolbox.git
-git push -u origin main
-```
-
-> 别忘了把 `README.md` 与 `package.json` 里的 `your-github-name` 换成你的用户名，
-> 否则徽章与仓库链接会指向不存在的地址。
-
-## 部署到 GitHub Pages
-
-仓库自带 `.github/workflows/pages.yml`，两种方式任选：
-
-**A. Actions 部署（推荐）**
-
-1. 把代码 push 到 GitHub 的 `main` 分支；
-2. 仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**；
-3. 之后每次 push 到 `main` 都会自动发布到 `https://<你的用户名>.github.io/ops-toolbox/`。
-
-**B. 分支部署**
-
-在 **Settings → Pages** 里选择 **Deploy from a branch**，分支 `main`、目录 `/`，保存即可。
-
-> 小贴士：`assets/app.js` 顶部的 `REPO_URL` 是侧边栏 GitHub 链接的兜底地址。
-> 部署在 GitHub Pages 上时会自动识别用户名与仓库名，本地打开则用这个常量，改成你自己的仓库即可。
+`assets/app.js` 顶部的 `REPO_URL` 是侧边栏 GitHub 链接的兜底地址：
+部署在 GitHub Pages 上时会自动识别用户名与仓库名，本地打开则用这个常量。
 
 ## 浏览器兼容
 
