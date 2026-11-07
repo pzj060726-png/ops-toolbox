@@ -18,7 +18,13 @@ import {
   trimLines,
   reverseLines,
 } from "../src/tools/text.js";
+import { webcrypto } from "node:crypto";
 import { generatePassword } from "../src/tools/password.js";
+
+// Node 18 没有全局 WebCrypto，用 node:crypto 的 webcrypto 补上（19+ 自带，无需处理）。
+if (!globalThis.crypto) {
+  Object.defineProperty(globalThis, "crypto", { value: webcrypto, configurable: true });
+}
 
 test("HTML 实体转义与还原", () => {
   const escaped = htmlEscape('<a href="x">Tom & Jerry</a>');

@@ -21,7 +21,7 @@ const AMBIGUOUS_MAP = {
 function randomBelow(max) {
   const cryptoApi = globalThis.crypto;
   if (!cryptoApi || typeof cryptoApi.getRandomValues !== "function") {
-    throw new Error("当前环境不支持 crypto.getRandomValues");
+    throw new Error("当前环境没有 crypto.getRandomValues（浏览器请用 HTTPS/localhost，Node 请用 19+ 或注入 node:crypto 的 webcrypto）");
   }
   const buffer = new Uint32Array(1);
   const limit = Math.floor(0x100000000 / max) * max;
