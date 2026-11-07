@@ -2,6 +2,9 @@
 
 > 14 个运维 / 开发高频小工具，纯前端运行，数据不离开浏览器。
 
+**在线试用 → <https://pzj060726-png.github.io/ops-toolbox/>**
+
+[![在线体验](https://img.shields.io/badge/demo-live-0d9488.svg)](https://pzj060726-png.github.io/ops-toolbox/)
 [![CI](https://github.com/pzj060726-png/ops-toolbox/actions/workflows/ci.yml/badge.svg)](https://github.com/pzj060726-png/ops-toolbox/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-0d9488.svg)](./LICENSE)
 [![No dependencies](https://img.shields.io/badge/dependencies-0-0d9488.svg)](./package.json)
